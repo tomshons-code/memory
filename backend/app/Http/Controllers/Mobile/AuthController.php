@@ -87,7 +87,11 @@ class AuthController extends Controller
             'password'      => Hash::make($request->password),
         ]);
 
-        event(new Registered($user));
+        try {
+            event(new Registered($user));
+        } catch (\Exception $e) {
+            \Log::warning('Registration email failed for: ' . $user->email . ' - ' . $e->getMessage());
+        }
 
         $token = $user->createToken('auth_token')->plainTextToken;
 

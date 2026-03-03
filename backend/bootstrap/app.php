@@ -52,7 +52,7 @@ $app->singleton(
 |
 */
 $app->bind('path.public', function() {
-  return base_path().'/../public_html';
+  return base_path().'/../public';
 });
 
 return $app;

@@ -19,16 +19,14 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['https://memtest.zpsb.pl/', 'https://memory.zpsb.pl/'],
+    'allowed_origins' => ['https://memtest.zpsb.pl', 'https://memory.zpsb.pl', 'http://memory.zpsb.pl'],
 
     'allowed_origins_patterns' => [],
 
     'exposed_headers' => ['XSRF-TOKEN', 'X-XSRF-TOKEN'],
 
-    'exposed_headers' => [],
-
     'max_age' => 0,
 
-    'supports_credentials' => false,
+    'supports_credentials' => true,
 
 ];

@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
 
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -18,7 +19,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
 		$this->app->bind('path.public', function() {
-            return realpath(base_path().'/../public_html');
+            return base_path().'/../public';
         });
     }
 
@@ -29,6 +30,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        if (config('app.env') === 'production') {
+            URL::forceScheme('https');
+        }
+
         setlocale(LC_COLLATE, 'pl_PL.utf8');
         Schema::defaultStringLength(191);
         Collection::macro('paginate', function($perPage, $total = null, $page = null, $pageName = 'page') {

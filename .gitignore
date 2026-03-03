@@ -1,0 +1,26 @@
+# Vendor dependencies (any path)
+**/vendor/
+
+# Duplicate backend in public (old copy)
+public/backend/
+
+# Environment files
+**/.env
+
+# Cache & logs
+backend/storage/logs/*.log
+backend/storage/framework/cache/data/*
+backend/storage/framework/sessions/*
+backend/storage/framework/views/*
+backend/bootstrap/cache/packages.php
+backend/bootstrap/cache/services.php
+
+# Source maps
+*.map
+
+# Node modules
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db

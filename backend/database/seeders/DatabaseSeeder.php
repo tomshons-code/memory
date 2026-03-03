@@ -1,0 +1,45 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
+
+class DatabaseSeeder extends Seeder
+{
+    /**
+     * Seed the application's database.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        // $adminRole = Role::create(['guard_name' => 'admins', 'name' => 'admin']);
+        // $authorRole = Role::create(['guard_name' => 'admins', 'name' => 'author']);
+        // $mobileRole = Role::create(['guard_name' => 'mobile', 'name' => 'mobile']);
+        // $user = \App\Models\User::create([
+        //     'name' => 'Admin SOFINE',
+        //     'email' => 'dev@sofine.pl',
+        //     'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+        // ]);
+        // $user->assignRole($adminRole);
+        // $user1 = \App\Models\User::create([
+        //     'name' => 'Autor SOFINE',
+        //     'email' => 'rafal@sofine.pl',
+        //     'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+        // ]);
+        // $user1->assignRole($authorRole);
+        // $user2 = \App\Models\Client::create([
+        //     'first_name'    => 'Rafał',
+        //     'last_name'     => 'Bieniek',
+        //     'nickname'      => 'rafal',
+        //     'email'         => 'rafal@sofine.pl',
+        //     'password'      => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+        // ]);
+        // $user2->assignRole($mobileRole);
+        // \App\Models\Course::factory()->count(2)->create();
+        // \App\Models\Question::factory()->count(20)->create();
+        // \App\Models\Answer::factory()->count(50)->create();
+    }
+}
